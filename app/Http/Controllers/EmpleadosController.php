@@ -41,13 +41,13 @@ class EmpleadosController extends Controller
     public function store(StoreEmpleado $request)
     {
         $token = env('BMX_TOKEN');
-        $today = now()->format('Y-m-d');
+        $today = now('America/Mexico_City')->format('Y-m-d');
         $path = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/$today/$today";
         $resp = Curl::to($path)
             ->withHeader("Bmx-Token: $token")
             ->asJson()
             ->get();
-        if (!isset($resp->bmx->series[0]->datos[0]->dato) || true) {
+        if (!isset($resp->bmx->series[0]->datos[0]->dato)) {
             return redirect()
                 ->back()
                 ->withInput()
@@ -67,10 +67,10 @@ class EmpleadosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Empleado $employe)
+    public function show(Empleado $empleado)
     {
         return view('empleados.show')
-            ->with('employe', $employe);
+            ->with('employe', $empleado);
     }
 
     public function toggleActivo(Empleado $employe)

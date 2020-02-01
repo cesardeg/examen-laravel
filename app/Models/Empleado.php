@@ -16,4 +16,11 @@ class Empleado extends Model
         'telefono', 'correo', 'activo',
     ];
     const DELETED_AT = 'eliminado';
+
+    public function getSalarioProyectadoAttribute()
+    {
+        $rate = 0.05;
+        $period = 6;
+        return number_format($this->salarioDolares * pow(1 + $rate, $period), 2);
+    }
 }

@@ -16,44 +16,48 @@
                     </div>
                     @endif
                     <div class="row">
-                        <div class="col col-md-6">
-                            <label>Código</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Código</label>
                             <p>{{ $employe->id }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Nombre</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Nombre</label>
                             <p>{{ $employe->nombre }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Teléfono</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Teléfono</label>
                             <p>{{ $employe->telefono }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Correo electrónico</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Correo electrónico</label>
                             <p>{{ $employe->correo }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Dirección</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Dirección</label>
                             <p>{{ $employe->direccion }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Estado</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Estado</label>
                             <p>{{ $employe->estado }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Ciudad</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Ciudad</label>
                             <p>{{ $employe->ciudad }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Salario USD</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Salario USD</label>
                             <p>{{ $employe->salarioDolares }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Salario MXN</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Salario MXN</label>
                             <p>{{ $employe->salarioPesos }}</p>
                         </div>
-                        <div class="col col-md-6">
-                            <label>Activo</label>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Salario USD proyectado en 6 meses</label>
+                            <p>{{ $employe->salario_proyectado }}</p>
+                        </div>
+                        <div class="col col-md-6 form-group">
+                            <label class="font-weight-bold">Activo</label>
                             <p>{{ $employe->activo ? 'Si' : 'No' }}</p>
                         </div>
                     </div>
